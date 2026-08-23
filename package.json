@@ -1,0 +1,22 @@
+{
+  "name": "meeting-summarizer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack AI-powered Meeting Summarizer application built with React, Node.js, Express, Prisma, PostgreSQL, and OpenAI",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build": "npm run build:server && npm run build:client",
+    "test:server": "npm test --prefix server",
+    "test": "npm run test:server",
+    "prisma:generate": "npm run prisma:generate --prefix server",
+    "prisma:migrate": "npm run prisma:migrate --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

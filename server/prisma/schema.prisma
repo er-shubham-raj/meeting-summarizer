@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Meeting {
+  id               String   @id @default(uuid())
+  title            String
+  originalFileName String
+  fileType         String
+  fileSize         Int
+  status           String   @default("UPLOADED")
+  transcript       String?  @db.Text
+  summary          String?  @db.Text
+  keyDecisions     Json?
+  actionItems      Json?
+  importantPoints  Json?
+  errorMessage     String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("meetings")
+}
