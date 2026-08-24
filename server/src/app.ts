@@ -8,7 +8,10 @@ import { errorHandler } from './middleware/errorMiddleware.js';
 import { env } from './config/env.js';
 
 const app = express();
-
+// Trust Railway's reverse proxy so express-rate-limit can identify client IPs.
+if (env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1);
+}
 // Security middleware
 app.use(helmet());
 
