@@ -10,7 +10,7 @@
 A full-stack, enterprise-grade Meeting Summarizer application that converts uploaded meeting video/audio recordings into high-accuracy speech transcripts, structured executive summaries, key decisions, and prioritized action items using **Groq Speech-to-Text (`whisper-large-v3-turbo`)**, **Groq LLM (`openai/gpt-oss-120b`)**, and **FFmpeg audio extraction**.
 
 ---
-
+## Deployed Link - https://meeting-summarizer-shubham.up.railway.app/
 ## 1. Overview & Problem Statement
 
 ### The Problem
